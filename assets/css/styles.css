@@ -90,3 +90,14 @@ p {
     padding: 2rem;
     /*margin-right: 1rem;*/
 }
+
+/* Rules section*/
+
+h2 {
+    text-decoration: underline;
+}
+
+ul {
+    text-align: center;
+    list-style: inside;
+}
