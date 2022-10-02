@@ -82,14 +82,74 @@ function checkWinner(userGuess, compGuess){
     let win = '<h3>You Win!</h3>';
     let lose = '<h3>You Lose!</h3>';
     let draw = '<h3>Draw!</h3>';
-
+    //user picks rock
     if(user === 'rock'){
         if(comp === 'rock'){
             document.getElementById('result').innerHTML = draw;
         } else if (comp === 'scissors' || comp === 'lizard'){
             document.getElementById('result').innerHTML = win;
+            incrementUserScore();
         } else {
             document.getElementById('result').innerHTML = lose;
+            incrementCompScore();
         }
     }
+    //user picks paper
+    if(user === 'paper'){
+        if(comp === 'paper'){
+            document.getElementById('result').innerHTML = draw;
+        } else if (comp === 'rock' || comp === 'spock'){
+            document.getElementById('result').innerHTML = win;
+            incrementUserScore();
+        } else {
+            document.getElementById('result').innerHTML = lose;
+            incrementCompScore();
+        }
+    }
+    //user picks scissors
+    if(user === 'scissors'){
+        if(comp === 'scissors'){
+            document.getElementById('result').innerHTML = draw;
+        } else if (comp === 'paper' || comp === 'lizard'){
+            document.getElementById('result').innerHTML = win;
+            incrementUserScore();
+        } else {
+            document.getElementById('result').innerHTML = lose;
+            incrementCompScore();
+        }
+    }
+    //user picks lizard
+    if(user === 'lizard'){
+        if(comp === 'lizard'){
+            document.getElementById('result').innerHTML = draw;
+        } else if (comp === 'paper' || comp === 'spock'){
+            document.getElementById('result').innerHTML = win;
+            incrementUserScore();
+        } else {
+            document.getElementById('result').innerHTML = lose;
+            incrementCompScore();
+        }
+    }
+    //user picks spock
+    if(user === 'spock'){
+        if(comp === 'spock'){
+            document.getElementById('result').innerHTML = draw;
+        } else if (comp === 'scissors' || comp === 'rock'){
+            document.getElementById('result').innerHTML = win;
+            incrementUserScore();
+        } else {
+            document.getElementById('result').innerHTML = lose;
+            incrementCompScore();
+        }
+    }
+}
+
+function incrementUserScore(){
+    let score = parseInt(document.getElementById('you').innerText) + 1;
+    document.getElementById('you').innerText = score;
+}
+
+function incrementCompScore(){
+    let score = parseInt(document.getElementById('comp').innerText) + 1;
+    document.getElementById('comp').innerText = score;
 }
