@@ -1,6 +1,8 @@
 body {
     background-color: white;
     text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
 }
 
 /*Header section */
@@ -14,9 +16,16 @@ h1 {
 
 #game-area {
     width: 90%;
+    height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    background-color: azure;
+    background-color: #8c9ba5;
+}
+
+/* Button area*/
+
+#button-area {
+    padding: 1%;
 }
 
 .btn {
@@ -27,5 +36,57 @@ h1 {
 }
 
 i {
-    font-size: 2.5rem;
+    font-size: 2rem;
+}
+
+/* Game area */
+
+.choice-box {
+    width: 20%;
+    height: 5rem;
+    background-color: red;
+    padding: 2%;
+    display: inline-block;
+}
+
+.left {
+    float: left;
+    margin-left: 10%;
+}
+
+.right {
+    float: right;
+    margin-right: 10%;
+}
+
+.win-lose {
+    display: inline-block;
+    background-color: red;
+    height: 5rem;
+    width: 20%;
+    margin-top: 2%;
+}
+
+p {
+    padding-top: 8%;
+    padding-bottom: auto;
+}
+
+/* score section */
+
+.scores{
+    clear: both;
+    padding: 1rem 0;
+}
+
+.your-score {
+    display: inline;
+    padding: 2rem;
+    /*margin-left: 1rem;*/
+}
+
+.comp-score {
+    display: inline;
+    padding: 2rem;
+    /*margin-right: 1rem;*/
 }

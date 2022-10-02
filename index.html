@@ -8,6 +8,10 @@
     <script src="https://kit.fontawesome.com/41317a6613.js" crossorigin="anonymous"></script>
     <!--link to stylesheet-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!--link to Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <title>Take A Chance</title>
 </head>
 <body>
@@ -16,7 +20,7 @@
     </header>
     <!--button section-->
     <section id="game-area">
-        <div>
+        <div id="button-area">
             <button data-type="rock" class="btn btn-rock">
                 <i class="fa-regular fa-hand-back-fist"></i>
             </button>
@@ -34,15 +38,43 @@
             </button>
         </div>
         <div>
-            <div>your choice</div>
-            <div>win lose</div>
-            <div>computer choice</div>
+            <div class="choice-box left">
+                <p>Your choice</p>
+            </div>
+            <div class="win-lose">
+                <p>win-lose</p>
+            </div>
+            <div class="choice-box right">
+                <p>Comp choice</p>
+            </div>
         </div>
-        <div>difficulty section</div>
-        <div>score section</div>
+        <div class="scores">
+            <p class="your-score" >Your Score: <span id="you">0</span></p>
+            <p class="comp-score" >Computer Score: <span id="comp">0</span></p>
+        </div>
     </section>
+    
     <footer>
-        <p>Game rules</p>
+        <h2>Game rules</h2>
+        <ul>
+            <li>
+                Rock beats scissors and lizard
+            </li>
+            <li>
+                Paper beats rock and spock
+            </li>
+            <li>
+                Scissors beats paper and lizard
+            </li>
+            <li>
+                Lizard beats paper and spock
+            </li>
+            <li>
+                Spock beats rock and scissors
+            </li>
+        </ul>
     </footer>
+    <!--link to script -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
