@@ -6,7 +6,7 @@ document.getElementById('lizard').onclick = play;
 document.getElementById('spock').onclick = play;
 
 /**
- * The main function which is loaded from a user click
+ * The main function which is loaded from a user click and calls all other functions
  */
 function play(){
     let userGuess = this.id;
@@ -74,6 +74,10 @@ function findIcon(guess){
     return iconHtml;
 }
 
+/**
+ * Checks the winner of the game and displays winning message on screen
+ * then calls function to increment scores 
+ */
 function checkWinner(userGuess, compGuess){
     let user = userGuess;
     let comp = compGuess;
@@ -82,6 +86,7 @@ function checkWinner(userGuess, compGuess){
     let win = '<h3>You Win!</h3>';
     let lose = '<h3>You Lose!</h3>';
     let draw = '<h3>Draw!</h3>';
+
     //user picks rock
     if(user === 'rock'){
         if(comp === 'rock'){
@@ -144,11 +149,17 @@ function checkWinner(userGuess, compGuess){
     }
 }
 
+/**
+ * increments user score on a winning result
+ */
 function incrementUserScore(){
     let score = parseInt(document.getElementById('you').innerText) + 1;
     document.getElementById('you').innerText = score;
 }
 
+/**
+ * increments computer score on a losing result
+ */
 function incrementCompScore(){
     let score = parseInt(document.getElementById('comp').innerText) + 1;
     document.getElementById('comp').innerText = score;
