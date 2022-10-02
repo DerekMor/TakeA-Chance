@@ -122,3 +122,19 @@ ul {
     }
 
 }
+
+@media screen and (max-width: 370px){
+    .left, .right, #result, .your-score, .comp-score {
+        width: 100%;
+        float: none;
+        clear: both;
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    i {
+        font-size: 1rem;
+    }
+}
