@@ -109,6 +109,10 @@ ul {
         font-size: 1rem;
     }
 
+    .btn {
+        width: 30%;
+    }
+
     h2 {
         font-size: 1rem;
     }
